@@ -1,0 +1,27 @@
+% Improved preamble for Thesis Manuscript
+\documentclass[11pt,oneside]{article}
+\usepackage{thesistemp_kr} % Load English Thesis Template
+
+\begin{document}
+\include{00_titlepage.tex} % Title Page goes here
+%-------------- Main Matter --------------%
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\setstretch{1.7}
+\include{1_Introduction.tex} % Introduction text goes here
+\include{2_Literature_Review.tex} % Lit Review text goes here
+\include{3_Theory_Hypothesis.tex} % Theory text goes here
+\include{4_Research_Design.tex} % Research Design goes here
+\include{5_Main_Analysis.tex} % Analysis goes here
+\include{6_Conclusion.tex} % Conclusion goes here
+\include{7_Appendix.tex} % Appendix goes here
+
+\renewcommand{\refname}{}
+\addcontentsline{toc}{section}{참고문헌}
+\nocite{*}
+\section*{참고문헌}
+\vspace{-4em}
+\bibliography{reference} % Reference bibtex goees here
+\addcontentsline{toc}{section}{Abstract}
+\include{8_abstract.tex} % English Abstract goes here
+\end{document}

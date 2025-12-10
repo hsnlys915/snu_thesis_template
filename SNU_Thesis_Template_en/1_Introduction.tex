@@ -1,0 +1,60 @@
+\section{Introduction}
+This is Master's Thesis/Doctoral Dissertation Template for Department of Political Science and International Relations, Seoul National University
+
+\subsection{Inserting Figure}
+This is sample figure.
+\begin{figure}[h]
+\centering
+\footnotesize{\caption{Sample Figure}
+\label{fig:base-interaction}}
+\begin{tikzpicture}
+\node[inner sep=0pt] (plot) at (0,0) {
+\includegraphics[width=\columnwidth]{Graphics/overleaf-o-logo-primary.pdf}
+};
+\draw[black, thin] (plot.south west) rectangle (plot.north east);
+\end{tikzpicture}
+\end{figure}
+
+
+\subsection{Making Table}
+This is sample 2-by-2 Table.
+\begin{table}[h]
+\centering\caption{2 \times 2 Sample Table}
+\label{tab:sample2by2}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{
+  >{\centering\arraybackslash}m{3cm}
+  >{\centering\arraybackslash}m{3cm}
+  >{\centering\arraybackslash}m{3cm}
+  >{\centering\arraybackslash}m{3cm}
+  }
+\hline
+\rule{0pt}{0.4cm}
+ &  & \multicolumn{2}{c}{\textbf{A}}\\[0.2cm]
+\cline{3-4}
+\rule{0pt}{0.4cm}
+ &  & \textbf{A} & \textbf{A$^{\prime}$}\\[0.2cm]
+\hline
+\rule{0pt}{0.4cm}
+\multirow{2}{*}{\textbf{B}}
+  & \textbf{B} & \cellcolor{gray!15}\textbf{AB} & \cellcolor{gray!40}\textbf{A$^{\prime}$B}\\[0.2cm]
+\cline{2-4}
+\rule{0pt}{0.4cm}
+  & \textbf{B$^{\prime}$} & \cellcolor{gray!30}\textbf{AB$^{\prime}$} & \cellcolor{gray!90}\textbf{A$^{\prime}$B$^{\prime}$}\\[0.2cm]
+\hline
+\end{tabular}}
+\end{table} 
+
+\subsection{Writing Equation}
+This is sample equation.
+\begin{equation}
+\label{eq:reduced}
+\begin{aligned}
+Y = & A + B
+\end{aligned}
+\end{equation}
+
+\subsection{Writing Hypothesis}
+\begin{hypothesis}[\textbf{H1}]
+This is Sample Hypothesis
+\end{hypothesis}

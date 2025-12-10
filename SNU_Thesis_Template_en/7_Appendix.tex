@@ -1,0 +1,19 @@
+\singlespacing
+\appendix
+% 번호 형식 재정의 (순서 중요!)
+\renewcommand{\thesection}{\Alph{section}} 
+\renewcommand{\thefigure}{\thesection.\arabic{figure}} 
+\renewcommand{\thetable}{\thesection.\arabic{table}} 
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+% (선택) Appendix 이하에서는 subsection을 A.1, A.2, ... 로 표시하고 싶으면
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+% Appendix에 들어서면서 카운터 초기화
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+% 섹션 카운터를 A로 만든 뒤, 번호 없는 섹션 제목을 사용
+\refstepcounter{section}        % section = A
+\section*{Appendix}             % 본문에는 "Appendix"만 출력
+\addcontentsline{toc}{section}{Appendix} % 목차에도 번호 없이 "Appendix"만
+\label{app:appa}

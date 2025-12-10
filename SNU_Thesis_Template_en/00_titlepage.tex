@@ -1,0 +1,112 @@
+%-- Custom titlepage commands --%
+\newcommand{\thesistitle}{Sample Title}                                     % Input Thesis Title
+\newcommand{\thesissubtitle}{Sample Subtitle}                                  % Input Thesis Subtitle
+\newcommand{\degreename}{Master’s Thesis/Doctoral Dissertation}
+\newcommand{\submissionmonth}{Sample Month}                                 % Submission Month: January ~ December
+\newcommand{\submissionyear}{Sample Year}                                  % Submission Year
+\newcommand{\graduateschool}{Graduate School of Social Science}
+\newcommand{\department}{Political Science and International Relations}
+\newcommand{\authorname}{John Doe \& Jane Doe}                                      % Author Name
+
+%---------------- Title Page ----------------%        
+\setstretch{1.5}
+\begin{titlepage}
+  \centering
+  {\fontsize{14pt}{14pt} \textbf{\degreename\ of \authorname}\par}
+  \vspace{14pt}
+  \vspace{14pt}
+  \vspace{14pt}
+  \vspace{14pt}
+  {\fontsize{22pt}{22pt}\textbf{\thesistitle}\par}
+  \ifx\thesissubtitle\empty\else
+  {\fontsize{16pt}{16pt}\textbf{\thesissubtitle}\par}
+  \fi
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \ifx\thesiskorean\empty
+  \else
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  {\fontsize{16pt}{16pt}\textbf{}\\ % Korean Thesis Title
+  \textbf{}\par}                    % Korean Thesis Subtitle
+  \fi
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  {\fontsize{14pt}{14pt} \textbf{\submissionmonth~\submissionyear}\par}
+  \vfill
+  {\fontsize{16pt}{16pt} \textbf{\graduateschool\\
+   Seoul National University\\
+   \department\\
+   International Relations/Political Science Major}\par}
+  \vspace{14pt}
+  {\fontsize{16pt}{16pt}\textbf{\authorname}\par}
+\end{titlepage}
+
+%-------------- Approval Page --------------%
+\setstretch{1.5}
+\begin{titlepage}
+  \centering
+  {\fontsize{22pt}{22pt}\textbf{\thesistitle}\par}
+  \ifx\thesissubtitle\empty\else
+  {\fontsize{16pt}{16pt}\textbf{\thesissubtitle}\par}
+  \fi
+  \vspace{10pt}
+  {\fontsize{14pt}{14pt}\textbf{Advisor: }\par} % Advisor Name
+  \vspace{10pt}
+  {\fontsize{16pt}{16pt}
+  \textbf{Submitting a \degreename~of\\
+  Political Science and International Relations}\par}
+  \vspace{16pt}
+  {\fontsize{14pt}{14pt}\textbf{\submissionmonth~\submissionyear}\par}
+  \vspace{16pt}
+  {\fontsize{16pt}{16pt}
+  \textbf{\graduateschool\\
+  Seoul National University\\
+  \department\\
+  International Relations/Political Science Major}\par}
+  \vspace{16pt}
+  {\fontsize{14pt}{14pt}
+  \textbf{\authorname}\par}
+  \vspace{16pt}
+  \vspace{16pt}
+  {\fontsize{16pt}{16pt}
+  \textbf{Confirming the master's thesis written by\\
+  \authorname}\par}
+  {\fontsize{14pt}{14pt}\textbf{\submissionmonth~\submissionyear}\par}
+  \vfill
+  \centering
+  \begin{tabular}{>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{4cm}>{\raggedleft\arraybackslash}p{2cm}}
+  {\fontsize{14pt}{14pt}Chair} & {\fontsize{14pt}{14pt} % Input Chair Name Here
+  } & {\fontsize{14pt}{14pt}(Seal)}\\[1em]
+  {\fontsize{14pt}{14pt}Vice Chair} & {\fontsize{14pt}{14pt} % Input Vice Chair Name Here
+  } & {\fontsize{14pt}{14pt}(Seal)}\\[1em]
+  {\fontsize{14pt}{14pt}Examiner} & {\fontsize{14pt}{14pt} % Input Advisor Name Here
+  } & {\fontsize{14pt}{14pt}(Seal)}
+  \end{tabular}
+  \par
+\end{titlepage}
+%-------------- Front Matter --------------%
+\pagenumbering{roman}
+\setcounter{page}{1}
+\setstretch{1.0}
+\begin{abstract}
+% Abstract
+\end{abstract}
+
+\vspace{1em}
+\noindent \textbf{Keywords:} % Input Keywords Here as follows: Keyword 1; Keyword 2; Keyword 3; Keyword 4; Keyword 5
+
+\vspace{2em}
+\noindent \textbf{Student Number:} % Input Student ID Here
+
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables

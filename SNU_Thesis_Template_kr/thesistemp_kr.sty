@@ -1,0 +1,188 @@
+% Page layout
+\usepackage[
+  papersize={188mm, 257mm},
+  left=30mm,right=30mm,
+  top=20mm,bottom=30mm,
+  headheight=15mm, footskip=15mm]{geometry}
+
+% Font and spacing
+\usepackage{fontspec}
+\setmainfont{NotoSerifKR}[
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Regular,
+  ItalicFeatures = {FakeSlant=0.2}
+]
+\usepackage{luatexko}
+\setmainhangulfont{NotoSerifKR}[
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Regular,
+  ItalicFeatures = {FakeSlant=0.2}
+]
+\hangulpunctuations=0
+\usepackage{setspace}
+% You can adjust line spacing in the document body:
+% \onehalfspacing or \doublespacing
+
+% Mathematics
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xpatch}
+% Code to remove the dot
+\makeatletter
+\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{:}}{}{}
+\makeatother
+% Code to make hypothesis
+\newtheorem{hypothesis}{가설}
+% \begin{hypothesis}[put any keyword in parenthesis]
+% ...
+% \end{hypothesis}
+\usepackage{mathtools}
+\usepackage{microtype}
+
+% Graphics and figures
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,positioning,arrows.meta,calc,shapes.geometric,cd}
+\usepackage{pdflscape}
+\usepackage{afterpage} 
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{adjustbox}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{colortbl}
+\usepackage[flushleft]{threeparttable}
+\usepackage{longtable}
+
+% Captions
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+
+% Lists
+\usepackage{enumitem}
+% \begin{enumerate}[label = (\arabic*);\arabic*.;\Roman.;\textbullet;\textasteriskcentered]
+% ...
+% \end{enumerate}
+
+% Section title centering
+% Section title formatting: display as 'Chapter <number> <title>' and center
+\usepackage{titlesec}
+\usepackage{chngcntr} 
+
+% Colored boxes
+\usepackage{tcolorbox}
+
+% Header/footer
+\usepackage{fancyhdr}
+\usepackage[hang,flushmargin]{footmisc}
+\pagestyle{plain}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Bibliography
+\usepackage[authoryear, round]{natbib}
+\bibliographystyle{apalike_nd}
+% Make unidentified dates in citation to be displayed in n.d.
+
+% Hyperlinks (load after most packages)
+\usepackage{xurl} 
+% Enable hypenation in URL links
+\usepackage[hidelinks, colorlinks=true, linkcolor=black, urlcolor=Mahogany, citecolor=Mahogany, breaklinks=true, pagebackref=true]{hyperref}
+\usepackage{bookmark}
+
+% Adjustments
+\setlength\emergencystretch{1em}
+% Redefine footnote size
+\renewcommand{\footnotesize}{\fontsize{9}{11}\selectfont}
+
+\renewcommand{\floatpagefraction}{1}  
+
+\renewcommand*\bibname{""}
+
+% --- Section / Subsection : 제 n 장, 제 n 절 ---
+% subsection 번호는 각 장 안에서 1,2,3... 으로만 가게
+\counterwithin{subsection}{section}
+
+\titleformat{\section}[block]
+  {\normalfont\Large\bfseries\centering}
+  {제~\thesection~장}{0.5em}{}
+\titleformat{\subsection}[hang]
+  {\normalfont\large\bfseries\raggedright}
+  {제~\thesubsection~절}{0.5em}{}
+\titleformat{\subsubsection}[hang]
+  {\normalfont\normalsize\bfseries\raggedright}
+  {제~\thesubsubsection~소절}{0.5em}{}
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+% --- 표 번호 : [표 section-counter] → 예: [표 1-1] ---
+\renewcommand{\tablename}{표}
+
+% 표 번호를 '장-번호' 형식으로
+\counterwithin{table}{section}
+\renewcommand{\thetable}{\arabic{section}-\arabic{table}}
+
+% 캡션에 [표 1-1] 형식으로 출력
+\DeclareCaptionLabelFormat{kor-tab}{[표~#2]}
+\captionsetup[table]{labelformat=kor-tab,labelsep=space}
+
+% --- 그림 번호 : [그림 counter] → 예: [그림 1], [그림 2] ---
+\renewcommand{\figurename}{그림}
+\renewcommand{\thefigure}{\arabic{figure}} % 기본이지만 명시
+
+\DeclareCaptionLabelFormat{kor-fig}{[그림~#2]}
+\captionsetup[figure]{labelformat=kor-fig,labelsep=space}
+% 목차 / 표 목차 / 그림 목차 설정 -------------------
+\usepackage{tocloft}
+
+% --- 목차 제목 ---
+\renewcommand{\contentsname}{목\qquad 차}
+\renewcommand{\cfttoctitlefont}{\hfil\bfseries\Large}
+\renewcommand{\cftaftertoctitle}{\hfil}
+
+% 들여쓰기/번호 폭 (필요하면 조정)
+\setlength{\cftsecindent}{0pt}
+\setlength{\cftsecnumwidth}{4em}
+\setlength{\cftsubsecindent}{2em}
+\setlength{\cftsubsecnumwidth}{4em}
+% 표 목차 들여쓰기/번호폭
+\setlength{\cfttabindent}{0pt}
+\setlength{\cfttabnumwidth}{4em} % 폭은 필요에 따라 조정
+
+% 그림 목차 들여쓰기/번호폭
+\setlength{\cftfigindent}{0pt}
+\setlength{\cftfignumwidth}{4em} % 이것도 적당히 조정
+
+% 목차에서 섹션 번호: "제 1 장"
+\renewcommand{\cftsecpresnum}{제~}
+\renewcommand{\cftsecaftersnum}{~장\ }
+
+% 목차에서 섭섹션 번호: "제 1 절"
+\renewcommand{\cftsubsecpresnum}{제~}
+\renewcommand{\cftsubsecaftersnum}{~절\ }
+
+% --- 표 목차 ---
+\renewcommand{\listtablename}{\qquad\qquad\quad 표\qquad 목차}
+\renewcommand{\cftlottitlefont}{\hfil\bfseries\Large}
+\renewcommand{\cftafterlottitle}{\hfil}
+% [표 1-1] 형식
+\renewcommand{\cfttabpresnum}{\bfseries[표~}
+\renewcommand{\cfttabaftersnum}{\bfseries]\ }
+
+% --- 그림 목차 ---
+\renewcommand{\listfigurename}{\qquad\qquad\quad 그림\qquad 목차}
+\renewcommand{\cftloftitlefont}{\hfil\bfseries\Large}
+\renewcommand{\cftafterloftitle}{\hfil}
+% [그림 1] 형식
+\renewcommand{\cftfigpresnum}{\bfseries[그림~}
+\renewcommand{\cftfigaftersnum}{\bfseries]\ }
