@@ -1,0 +1,24 @@
+\begin{thebibliography}{}
+
+\bibitem[ACLED, 2019]{ACLED2019}
+ACLED (2019).
+\newblock {ACLED Codebook, 2019}.
+\newblock \url{https://www.acleddata.com}.
+\newblock Accessed: 2025-03-05.
+
+\bibitem[Cederman et~al., 2013]{cederman2013inequality}
+Cederman, L.-E., Gleditsch, K.~S., and Buhaug, H. (2013).
+\newblock {\em Inequality, grievances, and civil war}.
+\newblock Cambridge University Press.
+
+\bibitem[Lindberg and Herath, 2017]{lindberg2017land}
+Lindberg, J. and Herath, D. (2017).
+\newblock Land and grievances in post-conflict sri lanka: exploring the role of corruption complaints.
+\newblock In {\em Corruption in the Aftermath of War}, pages 166--182. Routledge.
+
+\bibitem[Runfola et~al., 2020]{geoboundaries}
+Runfola, D., Anderson, A., Baier, H., Crittenden, M., Dowker, E., Fuhrig, S., Goodman, S., Grimsley, G., Layko, R., Melville, G., Mulder, M., Oberman, R., Panganiban, J., Peck, A., Seitz, L., Shea, S., Slevin, H., Youngerman, R., and Hobbs, L. (2020).
+\newblock geoboundaries: A global database of political administrative boundaries.
+\newblock {\em PLOS ONE}, 15(4):1--9, DOI: \href{https://dx.doi.org/10.1371/journal.pone.0231866}{\ttfamily 10.1371/journal.pone.0231866}, \url{https://doi.org/10.1371/journal.pone.0231866}.
+
+\end{thebibliography}
