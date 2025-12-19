@@ -14,6 +14,6 @@ You can manually adjust the number of committee seals by expanding rows of tabul
 
 
 ## Version
-Patch: v0.1.1-alpha
+Patch: v0.1.2-alpha
 
-Date: Dec. 11, 2025
+Date: Dec. 19, 2025
