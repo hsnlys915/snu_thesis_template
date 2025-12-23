@@ -1,0 +1,16 @@
+\singlespacing
+\appendix
+% 번호 형식 재정의 (순서 중요!)
+\renewcommand{\thesection}{\Alph{section}} 
+\renewcommand{\thefigure}{\thesection.\arabic{figure}} 
+\renewcommand{\thetable}{\thesection.\arabic{table}} 
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+% Appendix에 들어서면서 카운터 초기화
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+\section*{부록}
+\addcontentsline{toc}{section}{부록} % 목차에도 번호 없이 Appendix만
+\label{app:appa}

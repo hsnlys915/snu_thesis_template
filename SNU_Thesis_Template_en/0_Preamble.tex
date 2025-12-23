@@ -1,6 +1,5 @@
 % Improved preamble for Thesis Manuscript
-\documentclass[11pt,oneside]{article}
-\usepackage{thesistemp_en} % Load English Thesis Template
+\documentclass[11pt,oneside]{thesistemp_en}
 
 \begin{document}
 \include{00_titlepage.tex} % Title Page goes here
@@ -17,11 +16,11 @@
 \include{7_Appendix.tex} % Appendix goes here
 
 \renewcommand{\refname}{}
-\addcontentsline{toc}{section}{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
 \nocite{*}
-\section*{Bibliography}
+\chapter*{Bibliography}
 \vspace{-4em}
 \bibliography{reference} % Reference bibtex goees here
-\addcontentsline{toc}{section}{국문 초록}
+\addcontentsline{toc}{chapter}{국문 초록}
 \include{8_Korean_abstract.tex} % Korean Abstract goes here
 \end{document}

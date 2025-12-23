@@ -1,0 +1,102 @@
+%-- Custom titlepage commands --%
+\newcommand{\thesistitle}{논문 제목의 둘째 줄은\\ 중앙에 균형있게 표시 (22pt)}                                     % Input Thesis Title
+\newcommand{\thesissubtitle}{부제가 있을 경우 중앙에 위치(16pt)}                                  % Input Thesis Subtitle
+\newcommand{\degreename}{\textbigcircle 학 \textbigcircle 사 학위논문}
+\newcommand{\submissionmonth}{월}                                 % Submission Month: January ~ December
+\newcommand{\submissionyear}{년}                                  % Submission Year
+\newcommand{\graduateschool}{서울대학교 대학원}
+\newcommand{\department}{정치외교학부}
+\newcommand{\authorname}{홍길동}                                      % Author Name
+
+%---------------- Title Page ----------------%        
+\setstretch{1.7}
+\begin{titlepage}
+  \centering
+  {\fontsize{14pt}{14pt}\selectfont  \textbf{\degreename}\par}
+  \vspace{14pt}
+  \vspace{14pt}
+  \vspace{14pt}
+  \vspace{14pt}
+  {\fontsize{22pt}{22pt}\selectfont \textbf{\thesistitle}\par}
+  {\fontsize{16pt}{16pt}\selectfont ---\ \textbf{\thesissubtitle}\ ---\par}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  {\fontsize{14pt}{14pt}\selectfont  
+  \textbf{\submissionyear\ \submissionmonth}\par}
+  \vfill
+  {\fontsize{16pt}{16pt}\selectfont  \textbf{\graduateschool}\par}
+  \vspace{14pt}
+  {\fontsize{16pt}{16pt}\selectfont  \textbf{\department\ 외교학전공/정치학전공}\par}
+  \vspace{14pt}
+  {\fontsize{16pt}{16pt}\selectfont \textbf{\authorname}\par}
+  \vspace{16pt}
+  \vspace{16pt}
+\end{titlepage}
+
+%-------------- Approval Page --------------%
+\setstretch{1.5}
+\begin{titlepage}
+  \centering
+  {\fontsize{22pt}{22pt}\selectfont \textbf{\thesistitle}\par}
+  {\fontsize{16pt}{16pt}\selectfont --\ \textbf{\thesissubtitle}\ --\par}
+  \vspace{10pt}
+  \vspace{10pt}
+  \vspace{10pt}
+  \vspace{10pt}
+  {\fontsize{14pt}{14pt}\selectfont \textbf{지도 교수 \textbigcircle\textbigcircle\textbigcircle}\par} % Advisor Name
+  \vspace{10pt}
+  \vspace{10pt}
+  {\fontsize{16pt}{16pt}\selectfont 
+  \textbf{이 논문을 \degreename 으로 제출함}\par}
+  \vspace{16pt}
+  {\fontsize{14pt}{14pt}\selectfont \textbf{\submissionyear\ \submissionmonth}\par}
+  \vspace{16pt}
+  {\fontsize{16pt}{16pt}\selectfont 
+  \textbf{\graduateschool\\
+  \department\ 외교학전공/정치학전공\\
+  \authorname}\par}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  {\fontsize{16pt}{16pt}\selectfont 
+  \textbf{\authorname 의 \degreename 을 인준함}\par}
+  {\fontsize{14pt}{14pt}\selectfont \textbf{\submissionyear\ \submissionmonth}\par}
+  \vfill
+  \centering
+  \begin{tabular}{>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{4cm}>{\raggedleft\arraybackslash}p{2cm}}
+  {\bfseries\fontsize{14pt}{14pt}\selectfont 위원장} & {\bfseries\fontsize{14pt}{14pt}\selectfont  % Input Chair Name Here
+  } & {\bfseries\fontsize{14pt}{14pt}\selectfont (인)}\\[1em]
+  {\bfseries\fontsize{14pt}{14pt}\selectfont 부위원장} & {\bfseries\fontsize{14pt}{14pt}\selectfont  % Input Vice Chair Name Here
+  } & {\bfseries\fontsize{14pt}{14pt}\selectfont (인)}\\[1em]
+  {\bfseries\fontsize{14pt}{14pt}\selectfont 위원} & {\bfseries\fontsize{14pt}{14pt}\selectfont  % Input Advisor Name Here
+  } & {\bfseries\fontsize{14pt}{14pt}\selectfont (인)}
+  \end{tabular}
+  \par
+\end{titlepage}
+%-------------- Front Matter --------------%
+\pagenumbering{roman}
+\setcounter{page}{1}
+\setstretch{1.0}
+\renewcommand{\abstractname}{\bfseries\fontsize{16pt}{16pt}\selectfont 초\qquad 록}
+\begin{abstract}
+% Abstract
+\end{abstract}
+
+\vspace{1em}
+\noindent \textbf{주요어:}\\ % Input Keywords Here as follows: Keyword 1; Keyword 2; Keyword 3; Keyword 4; Keyword 5
+\noindent \textbf{학번:} % Input Student ID Here
+
+\newpage
+\tableofcontents
+\listoftables
+\listoffigures

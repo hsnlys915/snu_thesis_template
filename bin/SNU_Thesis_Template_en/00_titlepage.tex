@@ -1,0 +1,112 @@
+%-- Custom titlepage commands --%
+\newcommand{\thesistitle}{Sample Title}                                     % Input Thesis Title
+\newcommand{\thesissubtitle}{Sample Subtitle}                                  % Input Thesis Subtitle
+\newcommand{\degreename}{Master’s Thesis/Doctoral Dissertation}
+\newcommand{\submissionmonth}{Sample Month}                                 % Submission Month: January ~ December
+\newcommand{\submissionyear}{Sample Year}                                  % Submission Year
+\newcommand{\graduateschool}{Graduate School of Social Science}
+\newcommand{\department}{Political Science and International Relations}
+\newcommand{\authorname}{John Doe \& Jane Doe}                                      % Author Name
+
+%---------------- Title Page ----------------%        
+\setstretch{1.5}
+\begin{titlepage}
+  \centering
+  {\fontsize{14pt}{14pt}\selectfont \textbf{\degreename\ of \authorname}\par}
+  \vspace{14pt}
+  \vspace{14pt}
+  \vspace{14pt}
+  \vspace{14pt}
+  {\fontsize{22pt}{22pt}\selectfont \textbf{\thesistitle}\par}
+  \ifx\thesissubtitle\empty\else
+  {\fontsize{16pt}{16pt}\selectfont \textbf{\thesissubtitle}\par}
+  \fi
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  \ifx\thesiskorean\empty
+  \else
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  {\fontsize{16pt}{16pt}\selectfont \textbf{}\\ % Korean Thesis Title
+  \textbf{}\par}                    % Korean Thesis Subtitle
+  \fi
+  \vspace{16pt}
+  \vspace{16pt}
+  \vspace{16pt}
+  {\fontsize{14pt}{14pt}\selectfont \textbf{\submissionmonth~\submissionyear}\par}
+  \vfill
+  {\fontsize{16pt}{16pt}\selectfont \textbf{\graduateschool\\
+   Seoul National University\\
+   \department\\
+   International Relations/Political Science Major}\par}
+  \vspace{14pt}
+  {\fontsize{16pt}{16pt}\selectfont \textbf{\authorname}\par}
+\end{titlepage}
+
+%-------------- Approval Page --------------%
+\setstretch{1.5}
+\begin{titlepage}
+  \centering
+  {\fontsize{22pt}{22pt}\selectfont \textbf{\thesistitle}\par}
+  \ifx\thesissubtitle\empty\else
+  {\fontsize{16pt}{16pt}\selectfont \textbf{\thesissubtitle}\par}
+  \fi
+  \vspace{10pt}
+  {\fontsize{14pt}{14pt}\selectfont \textbf{Advisor: }\par} % Advisor Name
+  \vspace{10pt}
+  {\fontsize{16pt}{16pt}\selectfont 
+  \textbf{Submitting a \degreename~of\\
+  Political Science and International Relations}\par}
+  \vspace{16pt}
+  {\fontsize{14pt}{14pt}\selectfont \textbf{\submissionmonth~\submissionyear}\par}
+  \vspace{16pt}
+  {\fontsize{16pt}{16pt}\selectfont 
+  \textbf{\graduateschool\\
+  Seoul National University\\
+  \department\\
+  International Relations/Political Science Major}\par}
+  \vspace{16pt}
+  {\fontsize{14pt}{14pt}\selectfont 
+  \textbf{\authorname}\par}
+  \vspace{16pt}
+  \vspace{16pt}
+  {\fontsize{16pt}{16pt}\selectfont 
+  \textbf{Confirming the master's thesis written by\\
+  \authorname}\par}
+  {\fontsize{14pt}{14pt}\selectfont \textbf{\submissionmonth~\submissionyear}\par}
+  \vfill
+  \centering
+  \begin{tabular}{>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{2cm}}
+  {\bfseries\fontsize{14pt}{14pt}\selectfont Chair} & {\bfseries\fontsize{14pt}{14pt}\selectfont  % Input Chair Name Here
+  } & {\bfseries\fontsize{14pt}{14pt}\selectfont (Seal)}\\[1em]
+  {\bfseries\fontsize{14pt}{14pt}\selectfont Vice Chair} & {\bfseries\fontsize{14pt}{14pt}\selectfont  % Input Vice Chair Name Here
+  } & {\bfseries\fontsize{14pt}{14pt}\selectfont (Seal)}\\[1em]
+  {\bfseries\fontsize{14pt}{14pt}\selectfont Examiner} & {\bfseries\fontsize{14pt}{14pt}\selectfont  % Input Advisor Name Here
+  } & {\bfseries\fontsize{14pt}{14pt}\selectfont (Seal)}
+  \end{tabular}
+  \par
+\end{titlepage}
+%-------------- Front Matter --------------%
+\pagenumbering{roman}
+\setcounter{page}{1}
+\setstretch{1.0}
+\begin{abstract}
+% Abstract
+\end{abstract}
+
+\vspace{1em}
+\noindent \textbf{Keywords:} % Input Keywords Here as follows: Keyword 1; Keyword 2; Keyword 3; Keyword 4; Keyword 5
+
+\vspace{2em}
+\noindent \textbf{Student Number:} % Input Student ID Here
+
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
