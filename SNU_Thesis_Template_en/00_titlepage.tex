@@ -94,6 +94,18 @@
 \pagenumbering{roman}
 \setcounter{page}{1}
 \setstretch{1.0}
+\makeatletter
+\renewenvironment{abstract}{
+  \par
+  \begin{center}
+    {\bfseries \abstractname}
+  \end{center}
+  \small
+  \noindent
+}{
+  \par
+}
+\makeatother
 \begin{abstract}
 % Abstract
 \end{abstract}

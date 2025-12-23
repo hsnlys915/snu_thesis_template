@@ -87,6 +87,18 @@
 \pagenumbering{roman}
 \setcounter{page}{1}
 \setstretch{1.0}
+\makeatletter
+\renewenvironment{abstract}{
+  \par
+  \begin{center}
+    {\bfseries \abstractname}
+  \end{center}
+  \small
+  \noindent
+}{
+  \par
+}
+\makeatother
 \renewcommand{\abstractname}{\bfseries\fontsize{16pt}{16pt}\selectfont 초\qquad 록}
 \begin{abstract}
 % Abstract
@@ -95,6 +107,8 @@
 \vspace{1em}
 \noindent \textbf{주요어:}\\ % Input Keywords Here as follows: Keyword 1; Keyword 2; Keyword 3; Keyword 4; Keyword 5
 \noindent \textbf{학번:} % Input Student ID Here
+
+\vfill
 
 \newpage
 \tableofcontents

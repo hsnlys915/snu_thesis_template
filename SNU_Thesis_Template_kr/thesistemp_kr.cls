@@ -118,9 +118,9 @@
 % Redefine footnote size
 \renewcommand{\footnotesize}{\fontsize{9}{11}\selectfont}
 
-\renewcommand{\floatpagefraction}{1}  
+\renewcommand{\floatpagefraction}{1} 
 
-\renewcommand*\bibname{""}
+\renewcommand*\bibname{}
 
 % --- Section / Subsection : 제 n 장, 제 n 절 ---
 % subsection 번호는 각 장 안에서 1,2,3... 으로만 가게
@@ -206,3 +206,5 @@
   \chapter*{#1}%
   \addcontentsline{toc}{chapter}{#1}%
 }
+
+\renewcommand*\bibname{참고문헌}

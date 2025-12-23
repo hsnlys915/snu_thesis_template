@@ -163,5 +163,4 @@
 }
 
 \renewcommand*\contentsname{Table of Contents}
-\renewcommand*\bibname{""}
-
+\renewcommand*\bibname{Bibliography}
