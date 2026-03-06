@@ -35,6 +35,7 @@
   ItalicFeatures = {FakeSlant=0.2}
 ]
 \hangulpunctuations=0
+\RequirePackage[english]{babel}
 \RequirePackage{setspace}
 % You can adjust line spacing in the document body:
 % \onehalfspacing or \doublespacing
