@@ -1,7 +1,7 @@
 # snu_thesis_template: A Master's Thesis Template for SNU
 This is master's thesis template for Department of Political Science and International Relations, Seoul National University
 
-## Cautionary Notes
+## Notes
 ### General
 #### Compiler setting
 The packages used here for Korean 'luatexko' depends on the compiler engine "Lualatex."
